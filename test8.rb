@@ -27,7 +27,7 @@ class Praiser
     sleep(0.5)
   end
 
-  def tryagain
+  def try_again
     puts("Uh-uh, try again silly #{@term}.")
   end
 
@@ -38,7 +38,7 @@ class Praiser
         affirm
         break
       else
-        tryagain
+        try_again
         next
       end
     end
