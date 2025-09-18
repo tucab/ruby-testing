@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Trying to get better with methods
+# An example of setting the variables
 class Praiser
   def initialize
     @name = "Juno"
