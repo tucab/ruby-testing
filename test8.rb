@@ -5,11 +5,11 @@
 # Trying to get better with methods
 class Praiser
   def initialize
-    print('What is your name? ')
+    print("What is your name? ")
     @name = gets.chomp
-    print('And what term do you prefer? girl, boy, etc. ')
+    print("And what term do you prefer? girl, boy, etc. ")
     @term = gets.chomp
-    @answers = ['me', 'i am', @name.downcase]
+    @answers = ["me", "i am", @name.downcase]
   end
 
   def question
@@ -18,16 +18,16 @@ class Praiser
   end
 
   def phrases
-    ["Good #{@term}", "You've done so good today", 'Darling', "My sweet #{@name}"]
+    ["Good #{@term}", "You've done so good today", "My sweet #{@name}"]
   end
 
   def sorry
-    puts('Sorry :(')
+    puts("Sorry :(")
   end
 
   def affirm
     sleep(0.5)
-    puts('Yes you are')
+    puts("Yes you are")
     sleep(1)
     puts(phrases.sample)
     sleep(0.5)
@@ -43,7 +43,7 @@ class Praiser
       if @answers.include?(@response)
         affirm
         break
-      elsif @response == 'stop'
+      elsif @response == "stop"
         sorry
         break
       else
