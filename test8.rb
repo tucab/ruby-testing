@@ -19,14 +19,14 @@ class Praiser
     puts("Uh-uh, try again silly #{@term}.")
   end
 
-  def mommy
+  def question
     print("Who's a good #{@term}? ")
     @answer = gets.chomp.downcase
   end
 
   def praise
     loop do
-      mommy
+      question
       if @answers.include?(@answer)
         affirm
         break
