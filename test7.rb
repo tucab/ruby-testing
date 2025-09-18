@@ -10,7 +10,6 @@ class Test
     loop do
       print(question)
       guess = gets.chomp.downcase
-
       if answers.include?(guess)
         puts('Correct')
         @correct += 1
@@ -20,9 +19,7 @@ class Test
         break
       else
         attmp -= 1
-
         plural = ' more attempt left' if attmp == 1
-
         puts("Try again. #{attmp} #{plural}")
         next
       end
