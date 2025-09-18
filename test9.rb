@@ -15,7 +15,7 @@ class Praiser
   end
 
   def phrases
-    ["Good #{@term}", "You've done so good today", 'Darling', "My sweet #{@name}", "Baby #{@term}"]
+    ["Good #{@term}", "You've done so good today", 'Darling', "My sweet #{@name}", "Baby #{@term}", "Pretty #{@term}"]
   end
 
   def affirm
