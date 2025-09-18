@@ -4,7 +4,7 @@ class Test
   end
 
   def math(question, answers)
-    attmp = 3
+    @attmpt = 3
     plural = ' more attempts left'
 
     loop do
@@ -14,13 +14,13 @@ class Test
         puts('Correct')
         @correct += 1
         break
-      elsif attmp == 1
+      elsif @attmpt == 1
         puts('You stupid')
         break
       else
-        attmp -= 1
-        plural = ' more attempt left' if attmp == 1
-        puts("Try again. #{attmp} #{plural}")
+        @attmpt -= 1
+        plural = ' more attempt left' if @attmpt == 1
+        puts("Try again. #{@attmpt} #{plural}")
         next
       end
     end
@@ -34,5 +34,5 @@ end
 test = Test.new
 test.math('What is 9*7? ', ['63'])
 test.math('What is 21/7? ', ['3'])
-test.math("Does your mom know you're gay? ", %w[yes no])
+test.math("Does your mom know you're gay? ", %w[yes no yeah nah])
 test.displaycorrect
