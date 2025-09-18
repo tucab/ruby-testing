@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # An example of setting the variables
+# I can't even lie I actually get flustered from this lmao
 class Praiser
   def initialize
     @name = "Juno"
