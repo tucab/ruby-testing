@@ -12,15 +12,19 @@ class Praiser
 
   def question
     print("Who's a good #{@term}? ")
-    @answer = gets.chomp.downcase
+    @response = gets.chomp.downcase
+  end
+
+  def phrases
+    ["Good #{@term}", "You've done so good today", "Darling", "My sweet #{@name}"]
   end
 
   def affirm
     sleep(0.5)
     puts("Yes you are")
     sleep(1)
-    puts("Good #{@term}")
-    sleep(1)
+    puts(phrases.sample)
+    sleep(0.5)
   end
 
   def tryagain
@@ -30,7 +34,7 @@ class Praiser
   def praise
     loop do
       question
-      if @answers.include?(@answer)
+      if @answers.include?(@response)
         affirm
         break
       else
