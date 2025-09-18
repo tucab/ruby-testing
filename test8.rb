@@ -9,7 +9,14 @@ class Praiser
     @name = gets.chomp
     print("And what term do you prefer? girl, boy, etc. ")
     @term = gets.chomp
-    @answers = ["me", "i am", @name.downcase]
+    @answers = [
+      "me",
+      "i am",
+      @name.downcase,
+      "i'm a good #{@term.downcase}",
+      "im a good #{@term.downcase}",
+      "i am a good #{@term.downcase}"
+    ]
   end
 
   def question

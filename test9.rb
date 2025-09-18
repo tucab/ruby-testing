@@ -4,9 +4,16 @@
 # I can't even lie I actually get flustered from this lmao
 class Praiser
   def initialize
-    @name = 'Juno'
-    @term = 'girl'
-    @answers = ['me', 'i am', @name.downcase]
+    @name = "Juno"
+    @term = "girl"
+    @answers = [
+      "me",
+      "i am",
+      @name.downcase,
+      "i'm a good #{@term.downcase}",
+      "im a good #{@term.downcase}",
+      "i am a good #{@term.downcase}"
+    ]
   end
 
   def question
@@ -15,12 +22,12 @@ class Praiser
   end
 
   def phrases
-    ["Good #{@term}", "You've done so good today", 'Darling', "My sweet #{@name}", "Baby #{@term}", "Pretty #{@term}"]
+    ["Good #{@term}", "You've done so good today", "Darling", "My sweet #{@name}", "Baby #{@term}", "Pretty #{@term}"]
   end
 
   def affirm
     sleep(0.5)
-    puts('Yes you are')
+    puts("Yes you are")
     sleep(1)
     puts(phrases.sample)
     sleep(0.5)
