@@ -10,6 +10,11 @@ class Praiser
     @answers = ["me", "i am", @name.downcase]
   end
 
+  def question
+    print("Who's a good #{@term}? ")
+    @answer = gets.chomp.downcase
+  end
+
   def affirm
     sleep(0.5)
     puts("Yes you are")
@@ -20,11 +25,6 @@ class Praiser
 
   def tryagain
     puts("Uh-uh, try again silly #{@term}.")
-  end
-
-  def question
-    print("Who's a good #{@term}? ")
-    @answer = gets.chomp.downcase
   end
 
   def praise
