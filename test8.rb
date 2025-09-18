@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Trying to get better with methods
 class Praiser
   def initialize
     print("What is your name? ")
