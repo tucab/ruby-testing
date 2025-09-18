@@ -21,6 +21,10 @@ class Praiser
     ["Good #{@term}", "You've done so good today", 'Darling', "My sweet #{@name}"]
   end
 
+  def sorry
+    puts('Sorry :(')
+  end
+
   def affirm
     sleep(0.5)
     puts('Yes you are')
@@ -38,6 +42,9 @@ class Praiser
       question
       if @answers.include?(@response)
         affirm
+        break
+      elsif @response == 'stop'
+        sorry
         break
       else
         try_again
