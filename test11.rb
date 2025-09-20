@@ -10,12 +10,12 @@ class Game
   end
 
   def check
-    if @answ == 21 || 67
-      puts('You stupid')
+    if @answ == 21 || @answ == 67
+      puts("You stupid")
     elsif @answ == 19
-      puts('Kill yourself')
+      puts("Kill yourself")
     else
-      puts('Nuh uh')
+      puts("Nuh uh")
     end
   end
 
