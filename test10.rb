@@ -23,6 +23,7 @@ class ToDo
 
   def quitting_msg
     puts('Type "quit" to exit')
+    puts('Type "query" to see remaining tasks')
   end
 
   def input
@@ -36,6 +37,12 @@ class ToDo
     puts("#{@array.count} tasks today.")
   end
 
+  def query
+    return unless @done == 'query'
+
+    puts(@array)
+  end
+
   def collect
     input until @tasks == 'done'
     @array.pop
@@ -47,7 +54,8 @@ class ToDo
       print('When a task is completed, write it here. ')
       @done = gets.chomp.downcase
       quit
-      puts("ok but that's not on the list") unless @array.include?(@done)
+      query
+      puts("ok but that's not on the list") unless @array.include?(@done) || @done == 'query'
       @array.delete(@done)
       puts("#{@array.count} tasks left.") unless @array.count.zero?
     end
