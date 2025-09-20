@@ -3,11 +3,11 @@
 class ToDo
   def initialize
     @array = []
-    puts('Write "none" when done with entries.')
+    puts('Write "done" when done with entries.')
   end
 
   def stop_playing
-    return unless @array.length == 1 && @tasks == 'none'
+    return unless @array.length == 1 && @tasks == 'done'
 
     puts('bruh')
     exit
@@ -25,7 +25,7 @@ class ToDo
   end
 
   def collect
-    input until @tasks == 'none'
+    input until @tasks == 'done'
     @array.pop
     output_count
   end
@@ -36,7 +36,7 @@ class ToDo
       done = gets.chomp.downcase
       puts("ok but that's not on the list") unless @array.include?(done)
       @array.delete(done)
-      puts("#{@array.count} tasks left.")
+      puts("#{@array.count} tasks left.") unless @array.count.zero?
     end
   end
 end
