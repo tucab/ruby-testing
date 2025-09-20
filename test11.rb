@@ -10,7 +10,7 @@ class Game
   end
 
   def check
-    if @answ == 21
+    if @answ == 21 || 67
       puts('You stupid')
     elsif @answ == 19
       puts('Kill yourself')
