@@ -4,29 +4,29 @@
 class ToDo
   def initialize
     @array = []
-    puts("Write \"done\" when done with entries.")
+    puts('Write "done" when done with entries.')
   end
 
   def stop_playing
-    return unless @array.length == 1 && @tasks == "done"
+    return unless @array.length == 1 && @tasks == 'done'
 
-    puts("bruh")
+    puts('bruh')
     exit
   end
 
   def quit
-    return unless @done == "quit"
+    return unless @done == 'quit'
 
-    puts("ok bye")
+    puts('ok bye')
     exit
   end
 
   def quitting_msg
-    puts("Type \"quit\" to exit")
+    puts('Type "quit" to exit')
   end
 
   def input
-    print("What is on your todo list today? ")
+    print('What is on your todo list today? ')
     @array << gets.chomp.downcase
     @tasks = @array.last
     stop_playing
@@ -37,14 +37,14 @@ class ToDo
   end
 
   def collect
-    input until @tasks == "done"
+    input until @tasks == 'done'
     @array.pop
     output_count
   end
 
   def do_tasks
     until @array.count.zero?
-      print("When a task is completed, write it here. ")
+      print('When a task is completed, write it here. ')
       @done = gets.chomp.downcase
       quit
       puts("ok but that's not on the list") unless @array.include?(@done)
