@@ -6,16 +6,16 @@ class Game
   end
 
   def answer
-    @anws = gets.chomp.to_i
+    @answ = gets.chomp.to_i
   end
 
   def check
-    if @anws == 21
-      puts("You stupid")
-    elsif @anws == 19
-      puts("Kill yourself")
+    if @answ == 21
+      puts('You stupid')
+    elsif @answ == 19
+      puts('Kill yourself')
     else
-      puts("Nuh uh")
+      puts('Nuh uh')
     end
   end
 
