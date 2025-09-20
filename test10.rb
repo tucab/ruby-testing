@@ -1,20 +1,21 @@
 # frozen_string_literal: true
 
+# The to-do list
 class ToDo
   def initialize
     @array = []
-    puts('Write "done" when done with entries.')
+    puts("Write \"done\" when done with entries.")
   end
 
   def stop_playing
-    return unless @array.length == 1 && @tasks == 'done'
+    return unless @array.length == 1 && @tasks == "done"
 
-    puts('bruh')
+    puts("bruh")
     exit
   end
 
   def input
-    print('What is on your todo list today? ')
+    print("What is on your todo list today? ")
     @array << gets.chomp.downcase
     @tasks = @array.last
     stop_playing
@@ -25,14 +26,14 @@ class ToDo
   end
 
   def collect
-    input until @tasks == 'done'
+    input until @tasks == "done"
     @array.pop
     output_count
   end
 
   def do_tasks
     until @array.count.zero?
-      print('When a task is completed, write it here. ')
+      print("When a task is completed, write it here. ")
       done = gets.chomp.downcase
       puts("ok but that's not on the list") unless @array.include?(done)
       @array.delete(done)
