@@ -13,7 +13,7 @@ class Game
     if @answ == 21 || @answ == 67
       puts("You stupid")
     elsif @answ == 19
-      puts("Kill yourself")
+      puts("smartass")
     else
       puts("Nuh uh")
     end
