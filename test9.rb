@@ -29,7 +29,8 @@ class Praiser
       "My sweet #{@name}",
       "Baby #{@term}",
       "Pretty #{@term}",
-      "You look so good today"
+      "You look so good today",
+      "My baby kitten"
     ]
   end
 
