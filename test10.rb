@@ -26,7 +26,7 @@ class ToDo
     exit
   end
 
-  def quitting_msg
+  def input_msg
     puts('Type "quit" to exit and save remaining tasks to a file')
     puts('Type "query" to see remaining tasks')
   end
@@ -69,5 +69,5 @@ end
 
 todo = ToDo.new
 print(todo.collect)
-print(todo.quitting_msg)
+print(todo.input_msg)
 print(todo.do_tasks)
