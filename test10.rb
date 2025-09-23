@@ -4,7 +4,7 @@
 class ToDo
   def initialize
     @array = []
-    puts('Write "done" when done with entries.')
+    puts('Write "done" when finished with entries.')
   end
 
   def stop_playing
@@ -62,7 +62,7 @@ class ToDo
       query
       puts("ok but that's not on the list") unless @array.include?(@done) || @done == 'query'
       @array.delete(@done)
-      puts("#{@array.count} tasks left.") unless @array.count.zero?
+      puts("#{@array.count} tasks left.") unless @array.count.zero? || @done == 'query'
     end
   end
 end
